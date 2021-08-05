@@ -1,0 +1,1090 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     38486,       1082]
+NotebookOptionsPosition[     36528,       1028]
+NotebookOutlinePosition[     36871,       1043]
+CellTagsIndexPosition[     36828,       1040]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"\[Rho]", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"-", 
+    RowBox[{"ProductLog", "[", 
+     RowBox[{
+      RowBox[{"-", 
+       SuperscriptBox["\[Theta]\[Sigma]", "2"]}], 
+      SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], "]"}]}], "+", 
+   "\[Mu]"}]}]], "Input",
+ CellChangeTimes->{{3.803664180003059*^9, 3.8036641945707455`*^9}, {
+  3.803664298253173*^9, 3.8036643282987676`*^9}, {3.8036643706966624`*^9, 
+  3.803664413187952*^9}, {3.80366445104443*^9, 3.803664462924941*^9}, {
+  3.804446304718108*^9, 3.804446308366317*^9}, {3.8044464278599615`*^9, 
+  3.804446432271163*^9}},ExpressionUUID->"23aee242-9516-40df-980b-\
+d9b224c48ed9"],
+
+Cell[BoxData[
+ RowBox[{"\[Mu]", "-", 
+  RowBox[{"ProductLog", "[", 
+   RowBox[{
+    RowBox[{"-", 
+     SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+    SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], "Output",
+ CellChangeTimes->{3.8036644667680535`*^9, 3.8044462481025023`*^9, 
+  3.8044463097905073`*^9, 
+  3.8044464455825596`*^9},ExpressionUUID->"85f92abe-a020-4491-94c5-\
+b1a857537a98"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  RowBox[{
+   RowBox[{"Exp", "[", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["\[Theta]\[ExponentialE]", "\[Rho]"], 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "\[Rho]", "+", 
+        FractionBox[
+         SuperscriptBox["\[Rho]", "2"], "2"]}], ")"}]}], "+", 
+     FractionBox[
+      SuperscriptBox[
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\[Mu]", "/", 
+          SuperscriptBox["\[Sigma]", "2"]}], "-", 
+         RowBox[{
+          RowBox[{"Abs", "[", "\[Theta]", "]"}], 
+          SuperscriptBox["\[ExponentialE]", "\[Rho]"], 
+          RowBox[{"(", 
+           RowBox[{"1", "-", "\[Rho]"}], ")"}]}]}], ")"}], "2"], 
+      RowBox[{"2", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{
+          SuperscriptBox["\[Theta]\[ExponentialE]", "\[Rho]"], 
+          SuperscriptBox["\[Sigma]", "2"]}]}], ")"}]}]], "-", 
+     FractionBox[
+      SuperscriptBox["\[Mu]", "2"], 
+      RowBox[{"2", 
+       SuperscriptBox["\[Sigma]", "2"]}]]}], "]"}], "/", 
+   SqrtBox[
+    RowBox[{"1", "+", 
+     RowBox[{
+      RowBox[{"Abs", "[", "\[Theta]", "]"}], 
+      SuperscriptBox["\[ExponentialE]", "\[Rho]"], 
+      SuperscriptBox["\[Sigma]", "2"]}]}]]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8036645320888133`*^9, 3.803664537774289*^9}, {
+   3.8036645863152084`*^9, 3.8036646160868573`*^9}, {3.8036646966191893`*^9, 
+   3.803664717395939*^9}, {3.8036647508117676`*^9, 3.803664818007275*^9}, {
+   3.803664854659054*^9, 3.8036649568849916`*^9}, {3.8036649977983513`*^9, 
+   3.803665211465111*^9}, {3.804446226440441*^9, 3.8044462320464735`*^9}, {
+   3.804446438883477*^9, 3.804446465069439*^9}, {3.804446780678317*^9, 
+   3.804446827788147*^9}, 
+   3.804446959829009*^9},ExpressionUUID->"8dddf59a-8ca8-4e3b-9810-\
+d6c0a7c90527"],
+
+Cell[BoxData[
+ FractionBox[
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox[
+      SuperscriptBox["\[Mu]", "2"], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["\[Sigma]", "2"]}]]}], "+", 
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox["\[Mu]", 
+         SuperscriptBox["\[Sigma]", "2"]], "+", 
+        RowBox[{
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+         RowBox[{"Abs", "[", "\[Theta]", "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}], 
+       ")"}], "2"], 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{
+         SuperscriptBox["\[Theta]\[ExponentialE]", 
+          RowBox[{"\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+         SuperscriptBox["\[Sigma]", "2"]}]}], ")"}]}]], "+", 
+    RowBox[{
+     SuperscriptBox["\[Theta]\[ExponentialE]", 
+      RowBox[{"\[Mu]", "-", 
+       RowBox[{"ProductLog", "[", 
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+         SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "\[Mu]", "+", 
+       RowBox[{
+        FractionBox["1", "2"], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}], 
+         "2"]}], "+", 
+       RowBox[{"ProductLog", "[", 
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+         SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}]], 
+  SqrtBox[
+   RowBox[{"1", "+", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"\[Mu]", "-", 
+       RowBox[{"ProductLog", "[", 
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+         SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+     SuperscriptBox["\[Sigma]", "2"], " ", 
+     RowBox[{"Abs", "[", "\[Theta]", "]"}]}]}]]]], "Output",
+ CellChangeTimes->{
+  3.804446313321315*^9, {3.804446452041317*^9, 3.8044464669414663`*^9}, 
+   3.804446962144823*^9},ExpressionUUID->"664d7482-ef91-4cbf-a42e-\
+bee8668dbb19"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  RowBox[{
+   FractionBox[
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        SuperscriptBox["\[Mu]", "2"], 
+        RowBox[{"2", " ", 
+         SuperscriptBox["\[Sigma]", "2"]}]]}], "+", 
+      RowBox[{
+       SuperscriptBox["\[Theta]\[ExponentialE]", 
+        RowBox[{"\[Mu]", "-", 
+         RowBox[{"ProductLog", "[", 
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+           SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", "\[Mu]", "+", 
+         RowBox[{
+          FractionBox["1", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"\[Mu]", "-", 
+             RowBox[{"ProductLog", "[", 
+              RowBox[{
+               RowBox[{"-", 
+                SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+               SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}], 
+           "2"]}], "+", 
+         RowBox[{"ProductLog", "[", 
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+           SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}], "+", 
+      FractionBox[
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          FractionBox["\[Mu]", 
+           SuperscriptBox["\[Sigma]", "2"]], "-", 
+          RowBox[{
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{"\[Mu]", "-", 
+             RowBox[{"ProductLog", "[", 
+              RowBox[{
+               RowBox[{"-", 
+                SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+               SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+           RowBox[{"Abs", "[", "\[Theta]", "]"}], " ", 
+           RowBox[{"(", 
+            RowBox[{"1", "-", "\[Mu]", "+", 
+             RowBox[{"ProductLog", "[", 
+              RowBox[{
+               RowBox[{"-", 
+                SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+               SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}], 
+         ")"}], "2"], 
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          RowBox[{
+           SuperscriptBox["\[Theta]\[ExponentialE]", 
+            RowBox[{"\[Mu]", "-", 
+             RowBox[{"ProductLog", "[", 
+              RowBox[{
+               RowBox[{"-", 
+                SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+               SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+           SuperscriptBox["\[Sigma]", "2"]}]}], ")"}]}]]}]], 
+    SqrtBox[
+     RowBox[{"1", "+", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"\[Mu]", "-", 
+         RowBox[{"ProductLog", "[", 
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+           SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+       SuperscriptBox["\[Sigma]", "2"], " ", 
+       RowBox[{"Abs", "[", "\[Theta]", "]"}]}]}]]], ",", " ", 
+   RowBox[{"\[Theta]", "<", "0"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.804446254583169*^9, 3.8044462730168653`*^9}, {
+  3.804446325801933*^9, 
+  3.8044463721120687`*^9}},ExpressionUUID->"3bf39b9d-98ec-4b24-adfc-\
+680d02c89f05"],
+
+Cell[BoxData[
+ FractionBox[
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox[
+      SuperscriptBox["\[Mu]", "2"], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["\[Sigma]", "2"]}]]}], "+", 
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox["\[Mu]", 
+         SuperscriptBox["\[Sigma]", "2"]], "+", 
+        RowBox[{
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+         RowBox[{"Abs", "[", "\[Theta]", "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}], 
+       ")"}], "2"], 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{
+         SuperscriptBox["\[Theta]\[ExponentialE]", 
+          RowBox[{"\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+         SuperscriptBox["\[Sigma]", "2"]}]}], ")"}]}]], "+", 
+    RowBox[{
+     SuperscriptBox["\[Theta]\[ExponentialE]", 
+      RowBox[{"\[Mu]", "-", 
+       RowBox[{"ProductLog", "[", 
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+         SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "\[Mu]", "+", 
+       RowBox[{
+        FractionBox["1", "2"], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}], 
+         "2"]}], "+", 
+       RowBox[{"ProductLog", "[", 
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+         SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}]], 
+  SqrtBox[
+   RowBox[{"1", "+", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"\[Mu]", "-", 
+       RowBox[{"ProductLog", "[", 
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["\[ExponentialE]", "\[Mu]"]}], " ", 
+         SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+     SuperscriptBox["\[Sigma]", "2"], " ", 
+     RowBox[{"Abs", "[", "\[Theta]", "]"}]}]}]]]], "Output",
+ CellChangeTimes->{3.8044462788502936`*^9, 
+  3.8044463842765675`*^9},ExpressionUUID->"ff4f3507-2e5a-4a0a-8fc6-\
+2da40cfb3941"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       SuperscriptBox["\[Mu]", "2"], 
+       RowBox[{"2", " ", 
+        SuperscriptBox["\[Sigma]", "2"]}]]}], "+", 
+     FractionBox[
+      SuperscriptBox[
+       RowBox[{"Abs", "[", 
+        RowBox[{"k", "+", 
+         FractionBox["\[Mu]", 
+          SuperscriptBox["\[Sigma]", "2"]], "-", 
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"\[Mu]", "-", 
+            RowBox[{"ProductLog", "[", 
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{
+                 SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+              SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+          RowBox[{"Abs", "[", "\[Theta]", "]"}], " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", "\[Mu]", "+", 
+            RowBox[{"ProductLog", "[", 
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{
+                 SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+              SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}], 
+        "]"}], "2"], 
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{
+          SuperscriptBox["\[Theta]\[ExponentialE]", 
+           RowBox[{"\[Mu]", "-", 
+            RowBox[{"ProductLog", "[", 
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{
+                 SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+              SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+          SuperscriptBox["\[Sigma]", "2"]}]}], ")"}]}]], "+", 
+     RowBox[{
+      SuperscriptBox["\[Theta]\[ExponentialE]", 
+       RowBox[{"\[Mu]", "-", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{
+             SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+          SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "\[Mu]", "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"\[Mu]", "-", 
+            RowBox[{"ProductLog", "[", 
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{
+                 SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+              SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}], 
+          "2"]}], "+", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{
+             SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+          SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}]], "/", 
+   RowBox[{"(", 
+    SqrtBox[
+     RowBox[{"1", "+", 
+      RowBox[{
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"\[Mu]", "-", 
+         RowBox[{"ProductLog", "[", 
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["\[ExponentialE]", 
+             RowBox[{
+              SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+           SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+       SuperscriptBox["\[Sigma]", "2"], " ", 
+       RowBox[{"Abs", "[", "\[Theta]", "]"}]}]}]], ")"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8036652384487844`*^9, 
+  3.8036652437287292`*^9}},ExpressionUUID->"22efb8ce-7bb6-4e43-addf-\
+d4633937a73b"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox[
+      SuperscriptBox["\[Mu]", "2"], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["\[Sigma]", "2"]}]]}], "+", 
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"Abs", "[", 
+       RowBox[{"k", "+", 
+        FractionBox["\[Mu]", 
+         SuperscriptBox["\[Sigma]", "2"]], "+", 
+        RowBox[{
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{
+                SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+         RowBox[{"Abs", "[", "\[Theta]", "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{
+                SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}], 
+       "]"}], "2"], 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{
+         SuperscriptBox["\[Theta]\[ExponentialE]", 
+          RowBox[{"\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{
+                SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+         SuperscriptBox["\[Sigma]", "2"]}]}], ")"}]}]], "+", 
+    RowBox[{
+     SuperscriptBox["\[Theta]\[ExponentialE]", 
+      RowBox[{"\[Mu]", "-", 
+       RowBox[{"ProductLog", "[", 
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+         SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "\[Mu]", "+", 
+       RowBox[{
+        FractionBox["1", "2"], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{
+                SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}], 
+         "2"]}], "+", 
+       RowBox[{"ProductLog", "[", 
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+         SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}]], "/", 
+  RowBox[{"(", 
+   SqrtBox[
+    RowBox[{"1", "+", 
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"\[Mu]", "-", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{
+             SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+          SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+      SuperscriptBox["\[Sigma]", "2"], " ", 
+      RowBox[{"Abs", "[", "\[Theta]", "]"}]}]}]], ")"}]}]], "Output",
+ CellChangeTimes->{
+  3.8036652460599127`*^9},ExpressionUUID->"7fe7983e-0d5f-447d-97dc-\
+4581ef40d01b"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.8036642398683133`*^9, 3.8036642432980633`*^9}, {
+  3.8036642791473155`*^9, 
+  3.8036643006146975`*^9}},ExpressionUUID->"c83099f1-6bde-48fc-8fec-\
+09cd777323c6"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox[
+      SuperscriptBox["\[Mu]", "2"], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["\[Sigma]", "2"]}]]}], "+", 
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"Abs", "[", 
+       RowBox[{"k", "+", 
+        FractionBox["\[Mu]", 
+         SuperscriptBox["\[Sigma]", "2"]], "-", 
+        RowBox[{
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{
+                SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+         RowBox[{"Abs", "[", "\[Theta]", "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", "\[Mu]", "+", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{
+                SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}], 
+       "]"}], "2"], 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{
+         SuperscriptBox["\[Theta]\[ExponentialE]", 
+          RowBox[{"\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{
+                SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+         SuperscriptBox["\[Sigma]", "2"]}]}], ")"}]}]], "+", 
+    RowBox[{
+     SuperscriptBox["\[Theta]\[ExponentialE]", 
+      RowBox[{"\[Mu]", "-", 
+       RowBox[{"ProductLog", "[", 
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+         SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "\[Mu]", "+", 
+       RowBox[{
+        FractionBox["1", "2"], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{
+                SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}], 
+         "2"]}], "+", 
+       RowBox[{"ProductLog", "[", 
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+         SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}]], "/", 
+  RowBox[{"(", 
+   SqrtBox[
+    RowBox[{"1", "+", 
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"\[Mu]", "-", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{
+             SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+          SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+      SuperscriptBox["\[Sigma]", "2"], " ", 
+      RowBox[{"Abs", "[", "\[Theta]", "]"}]}]}]], ")"}]}]], "Input",Expression\
+UUID->"02a764dd-318f-44c3-b9fe-a7c4fb633ae6"],
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  FractionBox[
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       SuperscriptBox["\[Mu]", "2"], 
+       RowBox[{"2", " ", 
+        SuperscriptBox["\[Sigma]", "2"]}]]}], "+", 
+     FractionBox[
+      SuperscriptBox[
+       RowBox[{"Abs", "[", 
+        RowBox[{"k", "+", 
+         FractionBox["\[Mu]", 
+          SuperscriptBox["\[Sigma]", "2"]], "-", 
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"\[Mu]", "-", 
+            RowBox[{"ProductLog", "[", 
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{
+                 SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+              SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+          RowBox[{"Abs", "[", "\[Theta]", "]"}], " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "-", "\[Mu]", "+", 
+            RowBox[{"ProductLog", "[", 
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{
+                 SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+              SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}], 
+        "]"}], "2"], 
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{
+          SuperscriptBox["\[Theta]\[ExponentialE]", 
+           RowBox[{"\[Mu]", "-", 
+            RowBox[{"ProductLog", "[", 
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{
+                 SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+              SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+          SuperscriptBox["\[Sigma]", "2"]}]}], ")"}]}]], "+", 
+     RowBox[{
+      SuperscriptBox["\[Theta]\[ExponentialE]", 
+       RowBox[{"\[Mu]", "-", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{
+             SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+          SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "\[Mu]", "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"\[Mu]", "-", 
+            RowBox[{"ProductLog", "[", 
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{
+                 SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+              SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}], 
+          "2"]}], "+", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{
+             SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+          SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}]], 
+   SqrtBox[
+    RowBox[{"1", "+", 
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"\[Mu]", "-", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{
+             SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+          SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+      SuperscriptBox["\[Sigma]", "2"], " ", 
+      RowBox[{"Abs", "[", "\[Theta]", "]"}]}]}]]], "]"}]], "Input",
+ CellChangeTimes->{{3.803665294264764*^9, 
+  3.803665321198305*^9}},ExpressionUUID->"28c32aed-a851-4868-a5fc-\
+5cb012814269"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  FractionBox[
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox[
+       SuperscriptBox["\[Mu]", "2"], 
+       RowBox[{"2", " ", 
+        SuperscriptBox["\[Sigma]", "2"]}]]}], "+", 
+     FractionBox[
+      SuperscriptBox[
+       RowBox[{"Abs", "[", 
+        RowBox[{"k", "+", 
+         FractionBox["\[Mu]", 
+          SuperscriptBox["\[Sigma]", "2"]], "+", 
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{"\[Mu]", "-", 
+            RowBox[{"ProductLog", "[", 
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{
+                 SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+              SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+          RowBox[{"Abs", "[", "\[Theta]", "]"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "\[Mu]", "-", 
+            RowBox[{"ProductLog", "[", 
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{
+                 SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+              SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}], 
+        "]"}], "2"], 
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{
+          SuperscriptBox["\[Theta]\[ExponentialE]", 
+           RowBox[{"\[Mu]", "-", 
+            RowBox[{"ProductLog", "[", 
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{
+                 SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+              SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+          SuperscriptBox["\[Sigma]", "2"]}]}], ")"}]}]], "+", 
+     RowBox[{
+      SuperscriptBox["\[Theta]\[ExponentialE]", 
+       RowBox[{"\[Mu]", "-", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{
+             SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+          SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", "\[Mu]", "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"\[Mu]", "-", 
+            RowBox[{"ProductLog", "[", 
+             RowBox[{
+              RowBox[{"-", 
+               SuperscriptBox["\[ExponentialE]", 
+                RowBox[{
+                 SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+              SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}], 
+          "2"]}], "+", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{
+             SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+          SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}]], 
+   SqrtBox[
+    RowBox[{"1", "+", 
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"\[Mu]", "-", 
+        RowBox[{"ProductLog", "[", 
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["\[ExponentialE]", 
+            RowBox[{
+             SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+          SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+      SuperscriptBox["\[Sigma]", "2"], " ", 
+      RowBox[{"Abs", "[", "\[Theta]", "]"}]}]}]]], "]"}]], "Input",
+ CellChangeTimes->{{3.8036655302706347`*^9, 
+  3.803665536477789*^9}},ExpressionUUID->"d5dc8cab-34ff-4896-88e3-\
+7f0d1a99b79c"],
+
+Cell[BoxData[
+ FractionBox[
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox[
+      SuperscriptBox["\[Mu]", "2"], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["\[Sigma]", "2"]}]]}], "+", 
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"Abs", "[", 
+       RowBox[{"k", "+", 
+        FractionBox["\[Mu]", 
+         SuperscriptBox["\[Sigma]", "2"]], "+", 
+        RowBox[{
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{"\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{
+                SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+         RowBox[{"Abs", "[", "\[Theta]", "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", "1"}], "+", "\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{
+                SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}], 
+       "]"}], "2"], 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", 
+        RowBox[{
+         SuperscriptBox["\[Theta]\[ExponentialE]", 
+          RowBox[{"\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{
+                SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+         SuperscriptBox["\[Sigma]", "2"]}]}], ")"}]}]], "+", 
+    RowBox[{
+     SuperscriptBox["\[Theta]\[ExponentialE]", 
+      RowBox[{"\[Mu]", "-", 
+       RowBox[{"ProductLog", "[", 
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+         SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "-", "\[Mu]", "+", 
+       RowBox[{
+        FractionBox["1", "2"], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"\[Mu]", "-", 
+           RowBox[{"ProductLog", "[", 
+            RowBox[{
+             RowBox[{"-", 
+              SuperscriptBox["\[ExponentialE]", 
+               RowBox[{
+                SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+             SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}], 
+         "2"]}], "+", 
+       RowBox[{"ProductLog", "[", 
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+         SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}], ")"}]}]}]], 
+  SqrtBox[
+   RowBox[{"1", "+", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"\[Mu]", "-", 
+       RowBox[{"ProductLog", "[", 
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+         SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+     SuperscriptBox["\[Sigma]", "2"], " ", 
+     RowBox[{"Abs", "[", "\[Theta]", "]"}]}]}]]]], "Output",
+ CellChangeTimes->{
+  3.803665537825548*^9},ExpressionUUID->"2eab08cc-3dd9-4f29-bbfa-\
+479d09cae7cb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  RowBox[{
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"\[Mu]", "-", 
+     RowBox[{"ProductLog", "[", 
+      RowBox[{
+       RowBox[{"-", 
+        SuperscriptBox["\[ExponentialE]", 
+         RowBox[{
+          SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+       SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+   SuperscriptBox["\[Sigma]", "2"], " ", 
+   RowBox[{"Abs", "[", "\[Theta]", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.803665839146809*^9, 
+  3.803665845501212*^9}},ExpressionUUID->"019186f4-d684-4676-8a45-\
+be1dc54e9ed1"],
+
+Cell[BoxData[
+ RowBox[{
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{"\[Mu]", "-", 
+    RowBox[{"ProductLog", "[", 
+     RowBox[{
+      RowBox[{"-", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{
+         SuperscriptBox["k\[Sigma]", "2"], "+", "\[Mu]"}]]}], " ", 
+      SuperscriptBox["\[Theta]\[Sigma]", "2"]}], "]"}]}]], " ", 
+  SuperscriptBox["\[Sigma]", "2"], " ", 
+  RowBox[{"Abs", "[", "\[Theta]", "]"}]}]], "Output",
+ CellChangeTimes->{
+  3.8036658480173054`*^9},ExpressionUUID->"5659835e-d6a1-4207-8734-\
+212c6dc4d06b"]
+}, Open  ]]
+},
+WindowSize->{1520, 781},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 658, 15, 34, "Input", "ExpressionUUID" -> \
+"23aee242-9516-40df-980b-d9b224c48ed9"],
+Cell[1241, 39, 400, 10, 33, "Output", "ExpressionUUID" -> \
+"85f92abe-a020-4491-94c5-b1a857537a98"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1678, 54, 1795, 46, 63, "Input", "ExpressionUUID" -> \
+"8dddf59a-8ca8-4e3b-9810-d6c0a7c90527"],
+Cell[3476, 102, 3101, 86, 144, "Output", "ExpressionUUID" -> \
+"664d7482-ef91-4cbf-a42e-bee8668dbb19"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6614, 193, 3331, 88, 145, InheritFromParent, "ExpressionUUID" -> \
+"3bf39b9d-98ec-4b24-adfc-680d02c89f05"],
+Cell[9948, 283, 3053, 85, 144, "Output", "ExpressionUUID" -> \
+"ff4f3507-2e5a-4a0a-8fc6-2da40cfb3941"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13038, 373, 3763, 100, 123, "Input", "ExpressionUUID" -> \
+"22efb8ce-7bb6-4e43-addf-d4633937a73b"],
+Cell[16804, 475, 3635, 100, 122, "Output", "ExpressionUUID" -> \
+"7fe7983e-0d5f-447d-97dc-4581ef40d01b"]
+}, Open  ]],
+Cell[20454, 578, 209, 4, 30, "Input", "ExpressionUUID" -> \
+"c83099f1-6bde-48fc-8fec-09cd777323c6"],
+Cell[20666, 584, 3560, 97, 123, "Input", "ExpressionUUID" -> \
+"02a764dd-318f-44c3-b9fe-a7c4fb633ae6"],
+Cell[24229, 683, 3719, 99, 156, "Input", "ExpressionUUID" -> \
+"28c32aed-a851-4868-a5fc-5cb012814269"],
+Cell[CellGroupData[{
+Cell[27973, 786, 3749, 100, 156, "Input", "ExpressionUUID" -> \
+"d5dc8cab-34ff-4896-88e3-7f0d1a99b79c"],
+Cell[31725, 888, 3594, 99, 155, "Output", "ExpressionUUID" -> \
+"2eab08cc-3dd9-4f29-bbfa-479d09cae7cb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[35356, 992, 610, 16, 48, "Input", "ExpressionUUID" -> \
+"019186f4-d684-4676-8a45-be1dc54e9ed1"],
+Cell[35969, 1010, 543, 15, 41, "Output", "ExpressionUUID" -> \
+"5659835e-d6a1-4207-8734-212c6dc4d06b"]
+}, Open  ]]
+}
+]
+*)
+

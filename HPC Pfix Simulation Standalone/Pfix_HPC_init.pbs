@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#PBS -N Slim_Test
+#PBS -W group_list=masel
+#PBS -m bea
+#PBS -M loganjporrazzo@email.arizona.edu
+#PBS -q standard
+#PBS -l select=1:ncpus=1:mem=6gb
+#PBS -l walltime=1:0:0
+
+cd ~/example
+~/SLiM/build/slim -seed 12345 ./NewCodons
