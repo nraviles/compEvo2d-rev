@@ -64,16 +64,16 @@ with open('evoParameters.csv','r') as csvfile:
 #max_index = 400 #
 #de = b+1        # extinction death rate
 yi_option = 3   # option for determining equilibrium density
-samp = 1000       # 
-part = parValue[parName['part']]
-subsamp = len(di)/part
+samp = 10      # 
+part = int(parValue[parName['part']])
+subsamp = len(di)/part - 1
 for k in range(subsamp):
     print(di[k*part:(k*part + 2)])
 
-'''
+
 
 t = time.time()
-element_run_eqpop = Parallel(n_jobs=-1)(delayed(myfun.get_eq_pop_density)(parValue[parName['b']],di[k*part],parValue[parName['sa']],yi_option) for k in range(subsamp)) #got rid of the minus 1
+element_run_eqpop = Parallel(n_jobs=1)(delayed(myfun.get_eq_pop_density)(parValue[parName['b']],di[k*part],parValue[parName['sa']],yi_option) for k in range(subsamp)) #got rid of the minus 1
 print(time.time() - t)  
 
 parallel_eqpop = open("parallel_eqpop.txt","a")
@@ -81,16 +81,16 @@ for row in element_run_eqpop:
     parallel_eqpop.write(str(int(math.ceil(parValue[parName['T']]*row[0])))+'\n')
 parallel_eqpop.close()
 
-parallel_effsr = open("parallel_effsr.txt","a")
-for row in element_run_eqpop:
-    parallel_effsr.write(str(myfun.get_c_selection_coefficient(parValue[parName['b']],row[0],parValue[parName['cr']]))+'\n')
+parallel_effsr = open("parallel_effsr.txt","a") 
+for row in element_run_eqpop: # b,di,y,cr
+    parallel_effsr.write(str(myfun.get_c_selection_coefficient_OLD(parValue[parName['b']],row[0],parValue[parName['cr']]))+'\n')
 parallel_effsr.close()
 #The idea would be to take this and apply to
 d_Inc = 1
 c_Inc = 0
 
 t = time.time()
-element_run_abs = Parallel(n_jobs=-1)(delayed(myfun.modsimpop)(d_Inc,c_Inc,samp,parValue[parName['T']],parValue[parName['cr']],parValue[parName['b']],di[k*part:(k*part + 2)],parValue[parName['do']],((di[k*part]/di[k*part + 1])-1)/(di[k*part + 1]-1),d_max,yi_option) for k in range(subsamp)) #got rid of the minus 1
+element_run_abs = Parallel(n_jobs=1)(delayed(myfun.modsimpop)(d_Inc,c_Inc,samp,parValue[parName['T']],parValue[parName['cr']],parValue[parName['b']],di[k*part:(k*part + 2)],parValue[parName['do']],((di[k*part]/di[k*part + 1])-1)/(di[k*part + 1]-1),d_max,yi_option) for k in range(subsamp)) #got rid of the minus 1
 print(time.time() - t)  
 
 parallel_abs = open("parallel_abs.txt","a")
@@ -102,11 +102,10 @@ d_Inc = 0
 c_Inc = 1
 #d_pfixes[i] = myfun.modsimpop(d_Inc,c_Inc,samp,parValue[parName['T']],parValue[parName['cr']],parValue[parName['b']],di[i:(i+2)],parValue[parName['do']],parValue[parName['cr']],d_max,yi_option) #fix
 t = time.time()
-element_run_rel = Parallel(n_jobs=-1)(delayed(myfun.modsimpop)(d_Inc,c_Inc,samp,parValue[parName['T']],parValue[parName['cr']],parValue[parName['b']],di[k*5:(k*5 + 2)],do,((di[k*5]/di[k*5 + 1])-1)/(di[k*5 + 1]-1),d_max,yi_option) for k in range(subsamp)) #got rid of the minus 1
+element_run_rel = Parallel(n_jobs=1)(delayed(myfun.modsimpop)(d_Inc,c_Inc,samp,parValue[parName['T']],parValue[parName['cr']],parValue[parName['b']],di[k*5:(k*5 + 2)],parValue[parName['do']],((di[k*5]/di[k*5 + 1])-1)/(di[k*5 + 1]-1),d_max,yi_option) for k in range(subsamp)) #got rid of the minus 1
 print(time.time() - t)  
 
 parallel_rel = open("parallel_rel.txt","a")
 for row in element_run_rel:
     parallel_rel.write(str(row)+'\n')
 parallel_rel.close()
-'''

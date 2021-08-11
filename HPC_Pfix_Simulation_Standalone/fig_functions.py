@@ -15,7 +15,6 @@ import scipy.optimize as opt
 import bisect
 import scipy.stats as st
 # my functions in a seperate file
-import fig_functions as myfun  
 import math as math
 import scipy.special
 
@@ -246,6 +245,31 @@ def get_c_selection_coefficient(b,di,y,cr):
     else:
         return eff_sr
 
+def get_c_selection_coefficient_OLD(b,y,cr):
+    # Calculate the "c" selection coefficient for the Bertram & Masel variable 
+    # density lottery model for choice of ci = (1+sr)^i
+    #
+    # Inputs:
+    # b - juvenile birth rate
+    # di - death term associated with genotype
+    # y - equilibrium population density (note that eff_sr has dependence on "d"
+    # 	  through the equilibrium density as well).
+    # cr - increase to ci from a single beneficial mutation is (1+sr)
+    #
+    # Output: 
+    # eff_sr - selection coefficient of beneficial mutation in "c" trait
+    #
+
+    eff_r = cr*(1-y)*(1-(1+b*y)*np.exp(-b*y))/(y+(1-y)*(1-np.exp(-b)))*(b*y-1+np.exp(-b*y))/(b*y*(1-np.exp(-b*y))+cr*(1-(1+b*y)*np.exp(-b*y)))
+    
+    # scale growth rate to get growth rate per gen (1 gen = 1/(di-1) model iterations)
+    eff_sr = eff_r
+    
+    if np.isnan(eff_sr):
+        return 0
+    else:
+        return eff_sr
+
 '''
 def deltnplussim(m,c,U): old
 #    scatter=np.zeros([int(U),len(m)])
@@ -368,9 +392,9 @@ def simpop(samp,steps,T,sr,b,di,do,sa,de,yi_option): #and all other shit here
 	# and run through Jasons model i.e.
     c = np.array([1,(1+sr)]);
     pfix = 0;
-    print(myfun.get_eq_pop_density(b,di,sa,yi_option))
+    print(get_eq_pop_density(b,di,sa,yi_option))
     for i in range(int(samp)):
-        eq_pop = math.ceil(T * myfun.get_eq_pop_density(b,di,sa,yi_option));
+        eq_pop = math.ceil(T * get_eq_pop_density(b,di,sa,yi_option));
         #print(eq_pop/T)
         pop = np.array([eq_pop-1, 1]);
 
@@ -397,10 +421,10 @@ def trackpop(samp,steps,T,sr,b,di,do,sa,de,yi_option): #and all other shit here
 	# here we need to take an initial population, with all associated parameters
 	# and run through Jasons model i.e.
     c = np.array([1,(1+sr)]);
-    print(myfun.get_eq_pop_density(b,di,sa,yi_option))
+    print(get_eq_pop_density(b,di,sa,yi_option))
     tracker = np.array(np.zeros(steps))
     for i in range(int(samp)):
-        eq_pop = math.ceil(T * myfun.get_eq_pop_density(b,di,sa,yi_option));
+        eq_pop = math.ceil(T * get_eq_pop_density(b,di,sa,yi_option));
         #print(eq_pop/T)
         pop = np.array([eq_pop, 1]);
         trk = np.array(np.zeros(steps))
@@ -429,7 +453,7 @@ def compwin(n,samp,T,sr,b,di,do,sa,de,yi_option): #and all other shit here
 	# and run through Jasons model i.e.
     c = np.array([1,(1+sr)]);
     wins = np.array(np.zeros(samp))
-    eq_pop = math.ceil(T * myfun.get_eq_pop_density(b,di,sa,yi_option));
+    eq_pop = math.ceil(T * get_eq_pop_density(b,di,sa,yi_option));
         #print(eq_pop/T)
     pop = np.array([eq_pop-n, n]);
     U = int(T - sum(pop));
@@ -451,9 +475,9 @@ def modsimpop(d_Inc,c_Inc,samp,T,sr,b,dis,do,sa,de,yi_option): #and all other sh
 	# and run through Jasons model i.e.
     c = np.array([1,(1+sr*c_Inc)]);
     pfix = 0;
-    #print(myfun.get_eq_pop_density(b,dis[0],sa,yi_option))
+    #print(get_eq_pop_density(b,dis[0],sa,yi_option))
     for i in range(int(samp)):
-        eq_pop = int(math.ceil(T * myfun.get_eq_pop_density(b,dis[0],sa,yi_option)));
+        eq_pop = int(math.ceil(T * get_eq_pop_density(b,dis[0],sa,yi_option)));
         #print(eq_pop/T)
         pop = np.array([eq_pop-1, 1]);
 
