@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --job-name=Pfix_Estimation
+#SBATCH --ntasks=1
+#SBATCH --nodes=20            
+#SBATCH --mem-per-cpu=5gb                   
+#SBATCH --time=20:00:00   
+#SBATCH --partition=windfall
+#SBATCH --account=<masel>   
+
+module load python
+
+cd ~/parallel_tests_rev
+
+HPC_Pfix_Simulation.py

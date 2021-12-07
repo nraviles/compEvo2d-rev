@@ -1,0 +1,14 @@
+#!/bin/bash 
+
+#PBS -N Pfix_Simulations
+#PBS -W group_list=masel 
+#PBS -q windfall
+#PBS -l select=1:ncpus=20:mem=120gb 
+#PBS -l walltime=20:0:0 
+
+module load python
+
+cd ~/parallel_tests_rev
+
+python HPC_Pfix_Simulation.py 
+

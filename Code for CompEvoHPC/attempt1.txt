@@ -1,0 +1,31 @@
+
+
+------Before running python code, do this in the putty cmd
+$ module load anaconda/2020
+$ conda create --name py37 python=3.7 # Build a local environment with a specific version of python
+$ conda init bash # only needs to be run once
+$ conda activate py37 # activate your environment.
+
+
+
+
+
+
+
+
+#!/bin/bash <-- Required
+
+#PBS -N Slim_Test <-- Task Name
+#PBS -W group_list=masel <-- PI Group
+#PBS -m bea <-- Designate email to be sent whenever it begins and ends
+#PBS -M nraviles@email.arizona.edu <-- Email for previous
+#PBS -q standard <-- Types of nodes: Standard and Windfall: S/Group time, W/When Available
+#PBS -l select=1:ncpus=1:mem=6gb <-- select (choice of node; queues), ncpus (# of cpus), mem (memory allocation, use only 6)
+#PBS -l walltime=1:0:0 <-- Time before termination - hours:minutes:seconds
+------------------------Command line code----------------------------------
+-----Module loading section----- Python?
+module load python
+------------------------
+cd ~/parallel_tests <-- goes to folder
+
+python attempt1.py <-- running this script

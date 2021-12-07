@@ -93,6 +93,30 @@ def get_vDF_pfix_vers(N,s,U,pfix):
         return v
 #------------------------------------------------------------------------------
 
+def get_tau(s,U):
+    # Calculates the rate of adaptation v, derived in Desai and Fisher 2007
+    # for a given natural log of population size (lnN), selection coefficient (s) and beneficial
+    # mutation rate (U)
+    #
+    # Inputs:
+    # lnN - natural log of population size
+    # s - selection coefficient
+    # U - beneficial mutation rate
+    # pfix - numerically calcualted pfix value for class
+    #
+    # Output: 
+    # v - rate of adaptation
+        
+    # need to split out into successional and multiple mutations regimes
+    
+    tau = (1/s)*abs(np.log(s/U))
+    
+    if np.isnan(tau):
+        return 0
+    else:
+        return tau
+#------------------------------------------------------------------------------
+
 def get_qDF(N,s,U):
     # Calculates the rate of adaptation v, derived in Desai and Fisher 2007
     # for a given population size (N), selection coefficient (s) and beneficial
